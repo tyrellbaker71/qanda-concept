@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q&amp;A Driving Academy | Professional Driving Lessons</title>
+  <meta name="description" content="Q&A Driving Academy offers professional, patient driving lessons for learners, beginners and test preparation.">
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <a href="#home" class="brand" aria-label="Q&A Driving Academy - home">
+      <!-- REPLACE: images/logo.jpg with your logo file. If it is missing, the name is shown as text. -->
+      <img src="images/logo.jpg" alt="" height="52" data-fallback="wordmark">
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn btn-accent btn-small">Book a Lesson</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO: parked, lights coming on ================= -->
+<section class="hero" id="home" aria-label="Welcome">
+  <div class="hero-slides" aria-hidden="true">
+    <!-- REPLACE hero images. Add or remove slides freely; keep the first one with class "active".
+         If an image is missing the navy background shows instead. -->
+    <div class="slide active" style="background-image:url('images/hero-1.jpg')"></div>
+    <div class="slide" style="background-image:url('images/hero-2.jpg')"></div>
+    <div class="slide" style="background-image:url('images/hero-3.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <svg class="scene" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <polygon class="scene-road" points="149,820 1251,820 708,330 692,330"/>
+    <g id="scene-dashes"></g>
+  </svg>
+  <div class="beam" aria-hidden="true"></div>
+
+  <div class="container hero-content">
+    <p class="hero-name">Let's get you driving</p>
+    <h1>Confident Drivers Start Here.</h1>
+    <p class="hero-text">Professional, patient driving lessons that help learners become confident, safe and responsible drivers on the road.</p>
+    <div class="btn-row">
+      <a href="#contact" class="btn btn-accent">Book a Lesson</a>
+      <a href="#start" class="btn btn-outline js-only">Pick your starting point</a>
+    </div>
+  </div>
+
+  <div class="hero-dots" role="group" aria-label="Choose slide"></div>
+</section>
+
+<!-- ================= STARTING POINT (signature interaction) ================= -->
+<section class="start js-only" id="start" aria-labelledby="start-title">
+  <div class="container">
+    <div class="start-head">
+      <h2 id="start-title">Where are you starting from?</h2>
+      <p>Choose the one that sounds most like you. We will point you to the lessons that suit it.</p>
+    </div>
+
+    <fieldset class="pick">
+      <legend class="sr-only">Your starting point</legend>
+      <label class="pick-opt">
+        <input type="radio" name="start" value="beginner">
+        <span class="pick-tile"><strong>I have never driven</strong><span>Start with the basics</span></span>
+      </label>
+      <label class="pick-opt">
+        <input type="radio" name="start" value="nervous">
+        <span class="pick-tile"><strong>I feel nervous</strong><span>Calm, clear instruction</span></span>
+      </label>
+      <label class="pick-opt">
+        <input type="radio" name="start" value="learning">
+        <span class="pick-tile"><strong>I am working towards my licence</strong><span>One step at a time</span></span>
+      </label>
+      <label class="pick-opt">
+        <input type="radio" name="start" value="test">
+        <span class="pick-tile"><strong>My test is coming up</strong><span>Practise what you will be assessed on</span></span>
+      </label>
+      <label class="pick-opt">
+        <input type="radio" name="start" value="while">
+        <span class="pick-tile"><strong>It has been a while</strong><span>Rebuild your confidence</span></span>
+      </label>
+    </fieldset>
+
+    <div class="pick-result" id="pick-result" aria-live="polite" hidden>
+      <h3 id="pick-heading"></h3>
+      <p id="pick-text"></p>
+      <div class="btn-row">
+        <a class="btn btn-accent" id="pick-wa" href="https://wa.me/27724524602" target="_blank" rel="noopener">Message us on WhatsApp</a>
+        <a class="btn btn-outline" href="#services">See the lessons</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Horizon: night turns to day as the road opens up -->
+<div class="horizon" aria-hidden="true"></div>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our Lessons</h2>
+      <p>Whether you are sitting behind the wheel for the first time or getting ready for your test, we have a lesson to suit you.</p>
+    </div>
+
+    <ul class="lessons">
+      <li class="lesson" data-lesson="learner">
+        <div class="lesson-name"><h3>Learner Driver Lessons</h3><span class="fit" hidden>Suggested for you</span></div>
+        <p>Structured lessons for learners working towards their licence, one step at a time.</p>
+      </li>
+      <li class="lesson" data-lesson="beginner">
+        <div class="lesson-name"><h3>Beginner Driving Lessons</h3><span class="fit" hidden>Suggested for you</span></div>
+        <p>Never driven before? We start with the basics and move at a pace you are comfortable with.</p>
+      </li>
+      <li class="lesson" data-lesson="refresher">
+        <div class="lesson-name"><h3>Refresher Lessons</h3><span class="fit" hidden>Suggested for you</span></div>
+        <p>Rebuild your confidence if you have not driven in a while or feel unsure on the road.</p>
+      </li>
+      <li class="lesson" data-lesson="test">
+        <div class="lesson-name"><h3>Test Preparation</h3><span class="fit" hidden>Suggested for you</span></div>
+        <p>Practise the manoeuvres and road skills you will be assessed on before test day.</p>
+      </li>
+      <li class="lesson" data-lesson="practical">
+        <div class="lesson-name"><h3>Practical Driving Lessons</h3><span class="fit" hidden>Suggested for you</span></div>
+        <p>Real-road practice in everyday traffic to build judgement, awareness and control.</p>
+      </li>
+      <li class="lesson lesson-cta">
+        <div class="lesson-name"><h3>Not sure which lesson?</h3></div>
+        <div>
+          <p>Get in touch and we will help you choose the right place to start.</p>
+          <a href="#contact" class="btn btn-accent btn-small">Contact Us</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section section-alt" id="about">
+  <div class="container split">
+    <div class="split-text">
+      <h2>About Q&amp;A Driving Academy</h2>
+      <p>Q&amp;A Driving Academy is a driving school focused on helping learners build real confidence behind the wheel. Every lesson is taught calmly and clearly, so you always know what you are doing and why.</p>
+      <p>We cover the skills you need to prepare for your driving test, and just as importantly, the safe and responsible habits that stay with you long after you have your licence.</p>
+      <ul class="check-list">
+        <li>Professional instruction</li>
+        <li>Patient, supportive teaching</li>
+        <li>Safe driving habits</li>
+        <li>Driving test preparation</li>
+      </ul>
+    </div>
+    <div class="split-image">
+      <img src="images/about.jpg" alt="Driving instructor with a learner in a lesson vehicle" loading="lazy" data-photo>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="section" id="why">
+  <div class="container why">
+    <h2>Why Learn With Us</h2>
+    <dl class="why-list">
+      <div><dt>Patient &amp; Professional</dt><dd>Calm, clear instruction that keeps you relaxed and focused.</dd></div>
+      <div><dt>Learn at Your Own Pace</dt><dd>Lessons are adjusted to your experience and confidence.</dd></div>
+      <div><dt>Safety-Focused Training</dt><dd>Good habits and road awareness are part of every lesson.</dd></div>
+      <div><dt>Test Preparation</dt><dd>Practise what matters so you arrive at your test prepared.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= GOOGLE REVIEWS =================
+     Set the Google details in the CONFIG block at the top of script.js. -->
+<section class="section section-alt" id="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="reviews-title">What Our Learners Say</h2>
+      <p>See what learners say about their lessons on Google.</p>
+    </div>
+
+    <div class="reviews-summary">
+      <div class="rating-number" id="g-rating" hidden></div>
+      <div class="rating-meta">
+        <div class="stars" id="g-stars" role="img" aria-label="" hidden><span class="stars-fill"></span></div>
+        <p class="rating-count" id="g-count"></p>
+        <p class="g-attr">Reviews from <span class="google-word" aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span></p>
+      </div>
+      <a id="g-link" class="btn btn-primary" href="#" target="_blank" rel="noopener" hidden>Read All Reviews on Google</a>
+    </div>
+
+    <!-- Review cards are filled in by script.js when the Google API key is configured -->
+    <div class="review-cards" id="g-cards" hidden></div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <h2>Gallery</h2>
+      <p>A look at our lessons and vehicles.</p>
+    </div>
+
+    <!-- Each <img> is one gallery photo. Change src and alt, or copy a line to add more.
+         The first photo is shown larger. Missing photos show a labelled placeholder and
+         swap to the real photo automatically once the file is uploaded. -->
+    <div class="gallery" id="gallery-grid">
+      <img src="images/gallery-1.jpg" alt="Driving lesson" loading="lazy" data-photo>
+      <img src="images/gallery-2.jpg" alt="Driving lesson" loading="lazy" data-photo>
+      <img src="images/gallery-3.jpg" alt="Driving lesson" loading="lazy" data-photo>
+      <img src="images/gallery-4.jpg" alt="Driving lesson" loading="lazy" data-photo>
+      <img src="images/gallery-5.jpg" alt="Driving lesson" loading="lazy" data-photo>
+      <img src="images/gallery-6.jpg" alt="Driving lesson" loading="lazy" data-photo>
+      <img src="images/gallery-7.jpg" alt="Driving lesson" loading="lazy" data-photo>
+      <img src="images/gallery-8.jpg" alt="Driving lesson" loading="lazy" data-photo>
+      <!-- ADD MORE GALLERY IMAGES HERE -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= CALL TO ACTION ================= -->
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Get Behind the Wheel?</h2>
+    <p>Start your journey towards becoming a confident and responsible driver.</p>
+    <a href="#contact" class="btn btn-accent">Book a Lesson</a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contact Us</h2>
+      <p>Call or send us a WhatsApp message to book a lesson or ask a question.</p>
+    </div>
+
+    <div class="contact-layout">
+      <div>
+        <dl class="contact-list">
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+27315632832">031 563 2832</a></dd>
+          </div>
+          <div>
+            <dt>WhatsApp</dt>
+            <dd><a href="https://wa.me/27724524602" target="_blank" rel="noopener">+27 72 452 4602</a></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:qnadriving1@gmail.com">qnadriving1@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>Location / Service Area</dt>
+            <dd>28 Mackeurtan Avenue<br>Durban, 4051</dd>
+          </div>
+          <div>
+            <dt>Operating Hours</dt>
+            <dd>Monday–Friday: 8 am–5 pm<br>Saturday: 8 am–3 pm<br>Sunday: Closed</dd>
+          </div>
+        </dl>
+
+        <div class="btn-row contact-buttons">
+          <a href="tel:+27315632832" class="btn btn-primary">Call Now</a>
+          <a href="https://wa.me/27724524602" target="_blank" rel="noopener" class="btn btn-accent">WhatsApp Us</a>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=28+Mackeurtan+Avenue+Durban+4051" target="_blank" rel="noopener" class="btn btn-outline-dark">Get Directions</a>
+        </div>
+      </div>
+
+      <!-- MAP: change the address after q= (use + for spaces). No API key needed. -->
+      <div class="map-wrap">
+        <iframe title="Map showing the location of Q&amp;A Driving Academy"
+          src="https://www.google.com/maps?q=28+Mackeurtan+Avenue+Durban+4051&amp;output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Q&amp;A Driving Academy</h3>
+      <p>Professional driving lessons helping learners become confident, safe and responsible drivers.</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+27315632832">031 563 2832</a></li>
+        <li><a href="https://wa.me/27724524602" target="_blank" rel="noopener">+27 72 452 4602</a></li>
+        <li><a href="mailto:qnadriving1@gmail.com">qnadriving1@gmail.com</a></li>
+        <li>28 Mackeurtan Avenue, Durban, 4051</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> Q&amp;A Driving Academy. All rights reserved. | Powered by TyWebDev</p>
+  </div>
+</footer>
+
+<!-- The road: shows how far down the page you are, and each marker jumps to a section -->
+<nav class="road js-only" aria-label="Jump to a section">
+  <div class="road-track"></div>
+  <a class="tick" href="#home" data-target="home" aria-label="Start"><span>Start</span></a>
+  <a class="tick" href="#start" data-target="start" aria-label="Your starting point"><span>Your starting point</span></a>
+  <a class="tick" href="#services" data-target="services" aria-label="Lessons"><span>Lessons</span></a>
+  <a class="tick" href="#about" data-target="about" aria-label="About"><span>About</span></a>
+  <a class="tick" href="#gallery" data-target="gallery" aria-label="Gallery"><span>Gallery</span></a>
+  <a class="tick" href="#contact" data-target="contact" aria-label="Contact"><span>Contact</span></a>
+  <div class="car" aria-hidden="true">
+    <svg viewBox="0 0 20 34" height="26" width="15.3"><rect x="2" y="1" width="16" height="32" rx="6" fill="#F2562B"/><rect x="4.5" y="7" width="11" height="6" rx="2" fill="#181945"/><rect x="5" y="22" width="10" height="4" rx="1.5" fill="#181945"/></svg>
+  </div>
+</nav>
+
+<!-- Floating WhatsApp button -->
+<a class="wa-float" href="https://wa.me/27724524602" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false"><path fill="#fff" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zM20.52 3.45A11.8 11.8 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.67 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg>
+</a>
+
+<!-- Lightbox (used by the gallery) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="lb-close" aria-label="Close">&times;</button>
+  <button class="lb-prev" aria-label="Previous image">&#8249;</button>
+  <img src="" alt="">
+  <button class="lb-next" aria-label="Next image">&#8250;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
